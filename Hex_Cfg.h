@@ -22,46 +22,46 @@
 #define cSSC_BAUD 38400   //SSC32 BAUD rate
 
 //==============================================================================
-//[Arduino pin configuration] $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  ARDU PIN
-#define SOUND_PIN    5
-#define PS2_DAT      6
-#define PS2_CMD      7
-#define PS2_SEL      8
-#define PS2_CLK      9
+//[Arduino pin configuration] $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+#define SOUND_PIN     5
+#define PS2_DAT       6
+#define PS2_CMD       7
+#define PS2_SEL       8
+#define PS2_CLK       9
 #define cSSC_IN      10
 #define cSSC_OUT     11
 
 //==============================================================================
-//[SSC32 pin configuration] $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  PIN CONFIG
-#define cRRCoxaPin      0   //Rear Right leg Hip Horizontal
-#define cRRFemurPin     1   //Rear Right leg Hip Vertical
-#define cRRTibiaPin     2   //Rear Right leg Knee
-#define cRRTarsPin      3   //Tar
+//[PCA9685 pin configuration] $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$...Use for PCA9685
+#define cRFCoxaPin     15   //Front Right leg Hip Horizontal
+#define cRFFemurPin    14   //Front Right leg Hip Vertical
+#define cRFTibiaPin    13   //Front Right leg Knee
+#define cRFTarsPin    999   //Tar (4DOF, not needed)
 
-#define cRMCoxaPin      4   //Middle Right leg Hip Horizontal
-#define cRMFemurPin     5   //Middle Right leg Hip Vertical
-#define cRMTibiaPin     6   //Middle Right leg Knee
-#define cRMTarsPin      7   //Tar
+#define cLFCoxaPin     12   //Front Left leg Hip Horizontal
+#define cLFFemurPin    11   //Front Left leg Hip Vertical
+#define cLFTibiaPin    10   //Front Left leg Knee
+#define cLFTarsPin    999   //Tar (4DOF, not needed)
 
-#define cRFCoxaPin      8   //Front Right leg Hip Horizontal
-#define cRFFemurPin     9   //Front Right leg Hip Vertical
-#define cRFTibiaPin     10   //Front Right leg Knee
-#define cRFTarsPin      11   //Tar
+#define cRMCoxaPin      9   //Middle Right leg Hip Horizontal
+#define cRMFemurPin     8   //Middle Right leg Hip Vertical
+#define cRMTibiaPin     7   //Middle Right leg Knee
+#define cRMTarsPin    999   //Tar (4DOF, not needed)
 
-#define cLRCoxaPin      16   //Rear Left leg Hip Horizontal
-#define cLRFemurPin     17   //Rear Left leg Hip Vertical
-#define cLRTibiaPin     18   //Rear Left leg Knee
-#define cLRTarsPin      19   //Tar
+#define cLMCoxaPin      6   //Middle Left leg Hip Horizontal
+#define cLMFemurPin     5   //Middle Left leg Hip Vertical
+#define cLMTibiaPin     4   //Middle Left leg Knee
+#define cLMTarsPin    999   //Tar (4DOF, not needed)
 
-#define cLMCoxaPin      20   //Middle Left leg Hip Horizontal
-#define cLMFemurPin     21   //Middle Left leg Hip Vertical
-#define cLMTibiaPin     22   //Middle Left leg Knee
-#define cLMTarsPin      23   //Tar
+#define cRRCoxaPin      3   //Rear Right leg Hip Horizontal
+#define cRRFemurPin     2   //Rear Right leg Hip Vertical
+#define cRRTibiaPin     3   //Rear Right leg Knee $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$...ARDUINO_pin
+#define cRRTarsPin    999   //Tar (4DOF, not needed)
 
-#define cLFCoxaPin      24   //Front Left leg Hip Horizontal
-#define cLFFemurPin     25   //Front Left leg Hip Vertical
-#define cLFTibiaPin     26   //Front Left leg Knee
-#define cLFTarsPin      27   //Tar
+#define cLRCoxaPin      1   //Rear Left leg Hip Horizontal
+#define cLRFemurPin     0   //Rear Left leg Hip Vertical
+#define cLRTibiaPin     2   //Rear Left leg Knee  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$...ARDUINO_pin
+#define cLRTarsPin    999   //Tar (4DOF, not needed)
 
 //==============================================================================
 //[Inverse Servo Direction]
@@ -86,56 +86,56 @@
 #define cLFTibiaInv 1
 
 //==============================================================================
-//[Min/Max angles]
-#define cRRCoxaMin1	   -260
-#define cRRCoxaMax1		740
-#define cRRFemurMin1  -1010
-#define cRRFemurMax1	950
-#define cRRTibiaMin1  -1060
-#define cRRTibiaMax1	770
+//[Min/Max angles]                 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$...VERIFY ANGLES NEEDED
+#define cRRCoxaMin1	   -260//	-26
+#define cRRCoxaMax1		  740//	 74
+#define cRRFemurMin1  -1010//	101
+#define cRRFemurMax1	  950//	 95
+#define cRRTibiaMin1  -1060//-106
+#define cRRTibiaMax1	  770//	 77
 
-#define cRMCoxaMin1    -530
-#define cRMCoxaMax1		530
-#define cRMFemurMin1  -1010
-#define cRMFemurMax1	950
-#define cRMTibiaMin1  -1060
-#define cRMTibiaMax1    770
+#define cRMCoxaMin1    -530//	-53
+#define cRMCoxaMax1		  530//	 53
+#define cRMFemurMin1  -1010//  -101
+#define cRMFemurMax1	  950//	 95
+#define cRMTibiaMin1  -1060//  -106
+#define cRMTibiaMax1    770//	 77
 
-#define cRFCoxaMin1    -580
-#define cRFCoxaMax1     740
-#define cRFFemurMin1  -1010
-#define cRFFemurMax1    950
-#define cRFTibiaMin1  -1060
-#define cRFTibiaMax1    770
+#define cRFCoxaMin1    -580//	-58
+#define cRFCoxaMax1     740//  74
+#define cRFFemurMin1  -1010// -101
+#define cRFFemurMax1    950//	 95
+#define cRFTibiaMin1  -1060// -106
+#define cRFTibiaMax1    770//	 77
 
-#define cLRCoxaMin1    -740
-#define cLRCoxaMax1     260
-#define cLRFemurMin1   -950
-#define cLRFemurMax1   1010
-#define cLRTibiaMin1   -770
-#define cLRTibiaMax1   1060
+#define cLRCoxaMin1    -740//	-74
+#define cLRCoxaMax1     260//	 26
+#define cLRFemurMin1   -950//	-95
+#define cLRFemurMax1   1010//	101
+#define cLRTibiaMin1   -770//	-77
+#define cLRTibiaMax1   1060//	106
 
-#define cLMCoxaMin1    -530
-#define cLMCoxaMax1     530
-#define cLMFemurMin1   -950
-#define cLMFemurMax1   1010
-#define cLMTibiaMin1   -770
-#define cLMTibiaMax1   1060
+#define cLMCoxaMin1    -530//	-53
+#define cLMCoxaMax1     530//	 53
+#define cLMFemurMin1   -950//	-95
+#define cLMFemurMax1   1010//	101
+#define cLMTibiaMin1   -770//	-77
+#define cLMTibiaMax1   1060//	106
 
-#define cLFCoxaMin1    -740
-#define cLFCoxaMax1     580
-#define cLFFemurMin1   -950
-#define cLFFemurMax1   1010
-#define cLFTibiaMin1   -770
-#define cLFTibiaMax1   1060
+#define cLFCoxaMin1    -740//	-74
+#define cLFCoxaMax1     580//	 58
+#define cLFFemurMin1   -950//	-95
+#define cLFFemurMax1   1010//	101
+#define cLFTibiaMin1   -770//	-77
+#define cLFTibiaMax1   1060//	106
 
 //==============================================================================
 //[Leg dimensions]
 //Universal dimensions for each leg in mm
-//Set up for the AliExpress Phoenix Clones!
-#define cXXCoxaLength     29
-#define cXXFemurLength    84
-#define cXXTibiaLength   124
+//Set up for the Chinese Phoenix Clones!
+#define cXXCoxaLength     29	//Verified
+#define cXXFemurLength    85	//Verified
+#define cXXTibiaLength   125	//Verified
 #define cXXTarsLength     85	// 4DOF only...
 
 #define cRRCoxaLength     cXXCoxaLength
@@ -170,11 +170,12 @@
 
 //==============================================================================
 //[Body dimensions]
+
 #define cRRCoxaAngle1    -600
-#define cRMCoxaAngle1		0
+#define cRMCoxaAngle1		    0
 #define cRFCoxaAngle1     600
 #define cLRCoxaAngle1    -600
-#define cLMCoxaAngle1		0
+#define cLMCoxaAngle1		    0
 #define cLFCoxaAngle1     600
 
 #define cRROffsetX        -43
