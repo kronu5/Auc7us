@@ -96,9 +96,9 @@
 
 #define cRMCoxaMin1    -530//	-53
 #define cRMCoxaMax1		  530//	 53
-#define cRMFemurMin1  -1010//  -101
+#define cRMFemurMin1  -1010// -101
 #define cRMFemurMax1	  950//	 95
-#define cRMTibiaMin1  -1060//  -106
+#define cRMTibiaMin1  -1060// -106
 #define cRMTibiaMax1    770//	 77
 
 #define cRFCoxaMin1    -580//	-58
