@@ -1,14 +1,15 @@
 //==============================================================================
-//Lynxmotion Phoenix Clone
+//Project:    AUC7US
+//Type:       Lynxmotion Phoenix Clone
 //
 //Version:    3.1
 //Date:       09-04-2018
-//Programmer: Jeroen Janssen    (Xan)   - Main code
-//            Kurt Eckhardt     (KurtE) - Converted to arduino
-//            Lex van Teeffelen (Lexons)- Converted to AliExpress Hexapod
-//
+//Programmer: Jeroen Janssen    (Xan)       - Main code
+//            Kurt Eckhardt     (KurtE)     - Converted to arduino
+//            Lex van Teeffelen (Lexons)    - Converted to AliExpress Hexapod
+//            Keshav Sharan     (Keshav-s7) - PCA9685 Compatibility
 //This code should only be used on phoenix clones running the 
-// Lynxmotion SSC32-U and PS2 remote.
+// PCA9685 16PWM channel module.
 //==============================================================================
 // [Include files]
 #if ARDUINO>99
