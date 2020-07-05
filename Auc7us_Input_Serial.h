@@ -6,19 +6,13 @@
 //Date:       09-04-2018
 //Programmer: Jeroen Janssen    (Xan)       - Main code
 //            Kurt Eckhardt     (KurtE)     - Converted to arduino
-//            Lex van Teeffelen (Lexons)    - Converted to AliExpress Hexapod
 //            Keshav Sharan     (Keshav-s7) - PCA9685 and pyserial Compatibility
-//This code should only be used on phoenix clones running the 
-// PCA9685 16PWM channel module.
+//This code should only be used on phoenix clones.
+
 
 //Hardware setup: Serial version - This contoll input, uses the same format of input as the old Powerpod serial test program.  
 // Obviously it can be hacked up to almost any format
 // 
-//NEW IN V1.1
-//	- added speaker constant
-//	- added variable for number of gaits in code
-//	- Changed BodyRot to 1 decimal percision
-//	- Added variable Center Point of Rotation for the body
 //
 //	Walk method 1:
 //	- Left Stick	Walk/Strafe
