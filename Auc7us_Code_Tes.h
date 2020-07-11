@@ -6,7 +6,7 @@
 //Programmer: Jeroen Janssen    (Xan)   - Main code
 //            Kurt Eckhardt     (KurtE) - Converted to arduino
 //            Lex van Teeffelen (Lexons)- Converted to AliExpress Hexapod
-//
+//            Keshav Sharan     (Keshav-s7) - PCA9685 Compatibility
 //This code should only be used on phoenix clones running the 
 // Lynxmotion SSC32-U and PS2 remote.
 //==============================================================================
