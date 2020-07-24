@@ -107,11 +107,11 @@ typedef enum { _timer1, _Nbr_16timers } timer16_Sequence_t ;
 #define Servo_VERSION           2     // software version of this library
 
 #define MIN_PULSE_WIDTH			544     // the shortest pulse sent to a servo  
-#define MIN_PULSE_WIDTH_PCA		110
+//#define MIN_PULSE_WIDTH_PCA		110
 #define MAX_PULSE_WIDTH			2400     // the longest pulse sent to a servo 
-#define MAX_PULSE_WIDTH_PCA		600
+//#define MAX_PULSE_WIDTH_PCA		600
 #define DEFAULT_PULSE_WIDTH		1500     // default pulse width when servo is attached
-#define DEFAULT_PULSE_WIDTH_PCA	355
+//#define DEFAULT_PULSE_WIDTH_PCA	355
 #define REFRESH_INTERVAL		20000     // minumim time to refresh servos in microseconds 
 
 #define SERVOS_PER_TIMER		12     // the maximum number of servos controlled by one timer 
