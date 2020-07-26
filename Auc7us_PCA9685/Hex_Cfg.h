@@ -28,40 +28,40 @@
 #define PS2_CMD       7
 #define PS2_SEL       8
 #define PS2_CLK       9
-#define cSSC_IN      10
-#define cSSC_OUT     11
+#define cSSC_IN      12
+#define cSSC_OUT     13
 
 //==============================================================================
 //[PCA9685 pin configuration] $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$...Use for PCA9685
 #define cRFCoxaPin     15   //Front Right leg Hip Horizontal
 #define cRFFemurPin    14   //Front Right leg Hip Vertical
 #define cRFTibiaPin    13   //Front Right leg Knee
-#define cRFTarsPin    999   //Tar (4DOF, not needed)
+#define cRFTarsPin     999   //Tar (4DOF, not needed)
 
 #define cLFCoxaPin     12   //Front Left leg Hip Horizontal
 #define cLFFemurPin    11   //Front Left leg Hip Vertical
 #define cLFTibiaPin    10   //Front Left leg Knee
-#define cLFTarsPin    999   //Tar (4DOF, not needed)
+#define cLFTarsPin     999   //Tar (4DOF, not needed)
 
-#define cRMCoxaPin      9   //Middle Right leg Hip Horizontal
-#define cRMFemurPin     8   //Middle Right leg Hip Vertical
-#define cRMTibiaPin     7   //Middle Right leg Knee
-#define cRMTarsPin    999   //Tar (4DOF, not needed)
+#define cRMCoxaPin     9   //Middle Right leg Hip Horizontal
+#define cRMFemurPin    8   //Middle Right leg Hip Vertical
+#define cRMTibiaPin    7   //Middle Right leg Knee
+#define cRMTarsPin     999   //Tar (4DOF, not needed)
 
-#define cLMCoxaPin      6   //Middle Left leg Hip Horizontal
-#define cLMFemurPin     5   //Middle Left leg Hip Vertical
-#define cLMTibiaPin     4   //Middle Left leg Knee
-#define cLMTarsPin    999   //Tar (4DOF, not needed)
-
+#define cLMCoxaPin     6   //Middle Left leg Hip Horizontal
+#define cLMFemurPin    5   //Middle Left leg Hip Vertical
+#define cLMTibiaPin    4   //Middle Left leg Knee
+#define cLMTarsPin     999   //Tar (4DOF, not needed)
+ 
 #define cRRCoxaPin      3   //Rear Right leg Hip Horizontal
 #define cRRFemurPin     2   //Rear Right leg Hip Vertical
 #define cRRTibiaPin     3   //Rear Right leg Knee $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$...ARDUINO_pin
-#define cRRTarsPin    999   //Tar (4DOF, not needed)
+#define cRRTarsPin      999   //Tar (4DOF, not needed)
 
 #define cLRCoxaPin      1   //Rear Left leg Hip Horizontal
 #define cLRFemurPin     0   //Rear Left leg Hip Vertical
 #define cLRTibiaPin     2   //Rear Left leg Knee  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$...ARDUINO_pin
-#define cLRTarsPin    999   //Tar (4DOF, not needed)
+#define cLRTarsPin      999   //Tar (4DOF, not needed)
 
 //==============================================================================
 //[Inverse Servo Direction]

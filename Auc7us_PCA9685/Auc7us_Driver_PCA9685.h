@@ -64,7 +64,6 @@ short            g_asLegOffsets[CNT_LEGS*NUMSERVOSPERLEG];       // Offsets per 
 cServoGroupMove  g_cSGM;
 boolean g_fServosAttached;
 
-
 //##############################ServoEx2PCAfunc
 
 int writeMicro2AdaPWM(int value)
@@ -74,7 +73,7 @@ int writeMicro2AdaPWM(int value)
 	//this->writeMicro2AdaPWM(value);
 }
 
-
+//###############################
 
 //--------------------------------------------------------------------
 // Helper function to load the servo offsets from the EEPROM
@@ -217,6 +216,8 @@ void ServoDriver::GPSetSpeedMultiplyer(short sm)      // Set the Speed multiplie
 #endif // OPT_GPPLAYER
 
 
+
+
 //Servo being attached #############################################################
 //##################################################################################
 
@@ -241,6 +242,9 @@ void AttachServos(void) {
   }
 }
 
+
+
+
 //cServoGroupMove ##################################################################
 //##################################################################################
 
@@ -264,6 +268,9 @@ void ServoDriver::BeginServoUpdate(void)    // Start the update
 // For a modified 5645 (to 180 deg travel): cPwmDiv = 1500 and cPFConst = 900.
 #ifdef c4DOF
 void ServoDriver::OutputServoInfoForLeg(byte LegIndex, short sCoxaAngle1, short sFemurAngle1, short sTibiaAngle1, short sTarsAngle1)
+
+
+
 #else
 void ServoDriver::OutputServoInfoForLeg(byte LegIndex, short sCoxaAngle1, short sFemurAngle1, short sTibiaAngle1)
 #endif    
@@ -284,7 +291,11 @@ void ServoDriver::OutputServoInfoForLeg(byte LegIndex, short sCoxaAngle1, short 
 #ifdef c4DOF
   wTarsSSCV = ((long)(sTarsAngle1+900))*1000/cPwmDiv+cPFConst;
 #endif
-   
+  
+
+
+
+
 //##################################UpdatedPCA##########################################
 
   // Now lets tell the servos their next  location...
@@ -297,10 +308,16 @@ void ServoDriver::OutputServoInfoForLeg(byte LegIndex, short sCoxaAngle1, short 
   bServoIndex++;
   //g_aservoLegs[bServoIndex].writeMicroseconds(wTibiaSSCV + g_asLegOffsets[bServoIndex]);
   pwm.setPWM(bServoIndex, 0, writeMicro2AdaPWM(wTibiaSSCV + g_asLegOffsets[bServoIndex]));
+
+
+
+
+
+
 #ifdef c4DOF
   bServoIndex++;
   //g_aservoLegs[bServoIndex].writeMicroseconds(wTarsSSCV + g_asLegOffsets[bServoIndex]);
-  pwm.setPWM(bServoIndex, 0, writeMicro2AdaPWM(wCoxaSSCV + g_asLegOffsets[bServoIndex]));
+  pwm.setPWM(bServoIndex, 0, writeMicro2AdaPWM(wTarsSSCV + g_asLegOffsets[bServoIndex]));
 #endif
 }
 

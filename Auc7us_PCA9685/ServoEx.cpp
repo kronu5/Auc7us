@@ -341,10 +341,16 @@ void ServoEx::write(int value)
   {  // treat values less than 544 as angles in degrees (valid values in microseconds are handled as microseconds)
     if(value < 0) value = 0;
     if(value > 180) value = 180;
-    value = map(value, 110, 600, SERVO_MIN(),  SERVO_MAX());      
+    value = map(value, 0, 180, SERVO_MIN(),  SERVO_MAX());
   }
+
   this->writeMicroseconds(value);
 }
+
+//############################################################################################################
+//############################################################################################################
+//############################################################################################################
+//############################################################################################################
 
 void ServoEx::writeMicroseconds(int value)
 {
@@ -359,7 +365,7 @@ void ServoEx::writeMicroseconds(int value)
     
   	value = value - TRIM_DURATION;
     value = usToTicks(value);  // convert to ticks after compensating for interrupt overhead - 12 Aug 2009
-
+	//value = map(value, 110, 600, usToTicks((SERVO_MIN)-(TRIM_DURATION)), usToTicks((SERVO_MAX)-(TRIM_DURATION)); 
 	// Changes to handle multiple servo group move
 	if (GroupMoveActiveCnt)
       servos[channel].ticksPending = value;  
@@ -371,6 +377,12 @@ void ServoEx::writeMicroseconds(int value)
 	}
   } 
 }
+
+
+
+//############################################################################################################
+//############################################################################################################
+//############################################################################################################
 
 int ServoEx::read() // return the value as degrees
 {
@@ -398,6 +410,10 @@ bool ServoEx::moving()
   return (servos[this->servoIndex].ticksDelta != 0) ;
 }
 
+//####################################################################################
+//====================================================================================
+//####################################################################################
+
 void ServoEx::move(int value, unsigned int MoveTime)
 {
 	// For now just do shorthand of start, write and commit
@@ -409,6 +425,9 @@ void ServoEx::move(int value, unsigned int MoveTime)
 //####################################################################################
 //====================================================================================
 //####################################################################################
+
+
+
 
 void cServoGroupMove::start(void) 
 {
@@ -495,10 +514,11 @@ void cServoGroupMove::wait(uint32_t ulSGMMask)
 
 
 #elif defined(__arm__) && (defined(__MK20DX128__) || defined(__MK20DX256__))
+// ##############################################################################
 // ******************************************************************************
 // Teensy 3.0 implementation, using Programmable Delay Block
 // ******************************************************************************
-
+// ##############################################################################
 #include <Arduino.h> 
 #include "ServoEx.h"
 
@@ -579,6 +599,10 @@ void ServoEx::detach()
 	}
 }
 
+//############################################################################################################
+//############################################################################################################
+//############################################################################################################
+
 void ServoEx::write(int value)
 {
 	if (servoIndex >= MAX_SERVOS) return;
@@ -640,6 +664,10 @@ bool ServoEx::moving()
     return (servo_ticksDelta[servoIndex] != 0) ;
 }
 
+//####################################################################################
+//====================================================================================
+//####################################################################################
+
 void ServoEx::move(int value, unsigned int MoveTime)
 {
 	// For now just do shorthand of start, write and commit
@@ -647,6 +675,10 @@ void ServoEx::move(int value, unsigned int MoveTime)
 	write(value);
 	ServoGroupMove.commit(MoveTime);
 }
+
+//####################################################################################
+//====================================================================================
+//####################################################################################
 
 extern "C" void pdb_isr(void)
 {
